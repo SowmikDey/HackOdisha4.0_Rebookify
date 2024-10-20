@@ -1,0 +1,30 @@
+*{
+  font-family: poppins,sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+html,body{
+  height: 100%;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+:root {
+  --primary-color: #333;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --dark-primary-color: #fff;
+  --dark-background-color: #333;
+  --dark-text-color: #fff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark-mode {
+  background-color: var(--dark-background-color);
+  color: var(--dark-text-color);
+}

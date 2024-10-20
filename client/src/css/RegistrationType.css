@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f5ebe3; /* Light background color */
+  position: relative; /* Required for the absolute positioning of .color */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.color {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to be exactly centered */
+  width: 500px; /* Increased size for better visibility */
+  height: 500px; /* Height should match the width */
+  background-image: radial-gradient(closest-side, rgba(230, 30, 49, 1) 0%, rgba(230, 30, 49, 0) 60%);
+  z-index: -1; /* Keep it behind the content */
+  filter: blur(50px); /* Increase blur for a more subtle, smooth glow */
+  opacity: 0.8; /* Slight transparency to blend with the background */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.reg-opt-div {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Common styles for cards */
+.Reg-Card {
+  width: 300px;
+  height: 150px;
+  padding-top: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.Reg-Card i {
+  margin-left: 6px;
+}
+
+body.dark-mode .Reg-Card {
+  background-color: #444;
+  color: #fff;
+}
+
+.light-mode-button {
+  background-color: #f8f8f8;
+  color: #333;
+  border: 2px solid #333;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.light-mode-button:hover {
+  background-color: #000;
+  color: #fff;
+}

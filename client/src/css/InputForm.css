@@ -1,0 +1,98 @@
+div.post-div{
+  background-image: url('./input.png');
+  background-size: cover;
+}
+
+.post-form-container {
+  max-width: 800px;
+  position: relative;
+  left: 18%;
+  padding: 20px;
+  background-color: #ffffffa8;
+  backdrop-filter: blur(3px);
+  color: var(--text, #000);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.responsive-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds consistent spacing between form groups */
+}
+
+.post-form-group,
+.mb-3 {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.post-form-group label,
+.mb-3 label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.post-form-group input,
+.post-form-group textarea,
+.post-form-group select,
+.mb-3 input {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: var(--input-background, #f9f9f9);
+  color: var(--text, #000);
+}
+
+.input-group {
+  display: flex;
+  width: 100%; /* Ensure input group takes up full width */
+}
+
+.input-group-text {
+  padding: 0 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-right: none; /* Removes double border between text and input */
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+.input-group .form-control {
+  border-left: none; /* Removes double border between text and input */
+  border-radius: 0 5px 5px 0;
+}
+
+button {
+  background-color: #33c0ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 150px;
+  margin: 15px auto 0;
+}
+
+button:hover {
+  background-color: #0099cc;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.text-danger {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}

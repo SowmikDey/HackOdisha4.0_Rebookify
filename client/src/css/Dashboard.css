@@ -1,0 +1,217 @@
+/* Dashboard.css */
+
+.dashboard-container {
+    margin-top: 20px; /* Add a small margin above the dashboard */
+    padding: 20px; /* Add some padding around the dashboard */
+}
+
+.welcome-message {
+    margin-bottom: 10px; /* Space between welcome message and dashboard */
+    font-size: 2.5rem;
+    color: #333; /* Default color for light mode */
+    text-align: center;
+    font-weight: 600;
+}
+
+.dark-mode .welcome-message {
+    color: #f9f9f9; /* Light color for dark mode */
+}
+
+/* Dashboard styles */
+.dashboard {
+    width: 80%;
+    margin: 60px auto; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode styles */
+.dark-mode .dashboard {
+    background-color: #2c2c2c; /* Dark background */
+    border-color: #444; /* Darker border */
+    color: #f9f9f9; /* Light text color */
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Dark mode styles */
+.dark-mode .dashboard-header h1 {
+    color: #f9f9f9; /* Light text color for header */
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-section {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Added transition for transform */
+}
+
+/* Dark mode styles */
+.dark-mode .dashboard-section {
+    background-color: #3b3b3b; /* Dark background for sections */
+    border-color: #555; /* Darker border */
+}
+
+/* Dark mode styles */
+.dark-mode .section-header h2 {
+    color: #f9f9f9; /* Light text color for section headers */
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Transition for background color */
+}
+
+.section-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.arrow {
+    transition: transform 0.3s ease-in-out;
+}
+
+.arrow.open {
+    transform: rotate(180deg);
+}
+
+.section-content {
+    padding: 20px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out; /* Added padding transition */
+}
+
+/* Dark mode styles */
+.dark-mode .section-content {
+    background-color: #444; /* Darker background for content */
+    color: #f9f9f9; /* Light text color */
+}
+
+.section-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-content li {
+    display: flex; /* Flexbox for positioning */
+    justify-content: space-between; /* Pushes items to the sides */
+    align-items: center; /* Vertically centers content */
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s ease; /* Added transition for background color */
+}
+
+/* Dark mode styles */
+.dark-mode .section-content li {
+    border-bottom: 1px solid #555; /* Darker border for list items */
+}
+
+.section-content li:hover {
+    background-color: rgba(0, 0, 0, 0.03); /* Subtle hover effect for list items */
+}
+
+/* Dark mode styles */
+.dark-mode .section-content li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighter hover effect in dark mode */
+}
+
+.section-content li:last-child {
+    border-bottom: none;
+}
+
+/* Button styles */
+.section-content button {
+    background-color: #ffffff; /* Light background */
+    color: #333; /* Dark text color */
+    border: 2px solid #333;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px; /* Rounded corners for button */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+}
+
+/* Dark mode styles */
+.dark-mode .section-content button {
+    background-color: #5a5a5a; /* Dark button background */
+    color: #f9f9f9; /* Light text color */
+}
+
+/* Dark mode button hover styles */
+.dark-mode .section-content button:hover {
+    background-color: #ffffff; /* White background on hover */
+    color: #000000; /* Black text on hover */
+}
+
+.section-content button {
+    margin-left: auto; /* Push button to the right */
+}
+
+.dashboard-section.open .section-content {
+    max-height: 1000px; /* Arbitrary large value */
+    padding: 20px; /* Ensures padding is visible when open */
+}
+
+.dashboard-section:not(.open) .section-content {
+    max-height: 0;
+    padding: 0; /* Padding is reduced to 0 when closed */
+}
+
+.light-mode-button {
+    background-color: #ffffff; /* Light background */
+    color: #333; /* Dark text color */
+    border: 2px solid #333;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s ease, color 0.3s;
+}
+
+.dark-mode-button {
+    background-color: #333; /* Dark background */
+    color: #ffffff; /* Light text color */
+    border: 2px solid #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px; /* Rounded corners for button */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s; /* Added transform transition */
+}
+
+.light-mode-button:hover {
+    background-color: black; /* Slightly lighter background on hover */
+    color: #fff; /* Ensure text remains visible */
+}
+
+.dark-mode-button:hover {
+    background-color: #f9f9f9; /* White background on hover */
+    color: #333; /* Black text on hover */
+}

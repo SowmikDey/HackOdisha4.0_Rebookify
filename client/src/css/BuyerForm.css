@@ -1,0 +1,111 @@
+.buyerformdiv{
+  background-image: url('./reg2_2.png');
+}
+
+
+div.buyer-form-container {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  max-width: 500px; /* Increased width to accommodate content */
+  margin: auto;
+  display: flex;
+  flex-direction: column; /* Ensure the form elements stack vertically */
+}
+
+.heading{
+  color: #139DAE;
+  text-shadow: 
+  -1px -1px 0 #000,  /* Top-left shadow */
+  1px -1px 0 #000,   /* Top-right shadow */
+  -1px 1px 0 #000,   /* Bottom-left shadow */
+  1px 1px 0 #000;
+
+}
+
+.form-group {
+  margin-bottom: 20px; /* More margin between form groups */
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  text-shadow: 
+  -1px -1px 0 #000,  /* Top-left shadow */
+  1px -1px 0 #000,   /* Top-right shadow */
+  -1px 1px 0 #000,   /* Bottom-left shadow */
+  1px 1px 0 #000;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: inherit;
+  color: black;
+  font-weight: 600;
+}
+
+.form-group input::placeholder{
+  color: black;
+font-weight: 500;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #000;
+  outline: none;
+}
+
+/* Fix the overlapping issues by ensuring map has enough space */
+.map-container {
+  height: 300px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1; /* Ensure map stays above other content */
+}
+
+.leaflet-container {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #444;
+}
+
+.buyer-form-container.dark .submit-button {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.buyer-form-container.dark ::placeholder{
+  color: #f9f9f9;
+}
+
+
+.error-message {
+  color: #ff6666;
+  margin-top: 5px;
+  font-size: 0.9em;
+}

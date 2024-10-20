@@ -1,0 +1,77 @@
+/* Light mode styles */
+.login-container{
+  background: #f5f5f5; /* Light background */
+  color: #333; /* Dark text color */
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  height: 100vh; /* Full viewport height */
+  background-image: url('./login.png');
+}
+
+.login-form-wrapper {
+  width: 400px; /* Set a max width for the form wrapper */
+ /* Use auto width to prevent stretching */
+  padding: 20px; /* Add padding */
+  background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.login-form {
+  display: flex; /* Enable flexbox for the form */
+  flex-direction: column; /* Arrange children in a column */
+}
+
+.login-input {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  width: 80%; /* Set a specific width */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  left: 10%;
+}
+
+
+.login-button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  align-self: center; /* Center the button within the flex item */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  width: 80%; /* Set a specific width */
+}
+
+
+
+.login-button:hover {
+  color: #333;
+  background-color: #fff;
+  border-color: #333;
+}
+
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-error {
+  color: #ff4d4d;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Additional styles to ensure labels are above inputs */
+.label {
+  position: relative;
+  left: 10%;
+  margin-bottom: 5px; /* Add space below labels */
+  display: block; /* Ensure labels take full width */
+}

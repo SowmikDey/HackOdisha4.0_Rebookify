@@ -1,0 +1,322 @@
+.user-div{
+    background: linear-gradient(90deg,#ff330d,#ff660f,#ff9a60,#c1dfde,#74d4d7,#073148);
+    background-repeat: repeat; /* Repeat the image both horizontally and vertically */
+    background-size: cover; /* Keep the original size of the image */
+    background-attachment: fixed; /* Make sure the image stays in place while scrolling */
+    background-position: top left; /* Position the background at the top left */
+}
+
+
+.dashboard-link{
+    position: absolute;
+    right: 20px;
+}
+
+/* Common styles */
+.homepage-container {
+    max-width: 900px;
+    /* margin-top: 0;
+    margin: 0 40px 0 40px; */
+    position: relative;
+    left: 13%;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px)
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Create Post Icon */
+.create-post-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Search Filters */
+.search-filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    background: #f0f0f079;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-input::placeholder{
+    color: #000000;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+/* Blog Posts */
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-post {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.post-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.post-description {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Updated styles for individual post details */
+.post-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Separate styles for each detail item */
+.post-price,
+.post-location,
+.post-category,
+.post-years-used {
+    font-size: 14px; /* Smaller font size for better fit */
+    padding: 8px 12px; /* Adjusted padding */
+    border-radius: 10px; /* Round the corners for each detail */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+    display: flex; /* Use flexbox to center text */
+    flex-direction: row;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    max-width: 120px; /* Set a maximum width */
+}
+
+/* Light mode styles */
+span.post-price {
+    background-color: #f0f0f079;
+}
+
+.post-location {
+    background-color: #f0f0f079;
+}
+
+.post-category {
+    background-color: #f0f0f079;
+}
+
+.post-years-used {
+    background-color: #f0f0f079;
+}
+
+/* Dark mode styles for individual post details */
+body.dark-mode .post-price,
+body.dark-mode .post-location,
+body.dark-mode .post-category,
+body.dark-mode .post-years-used {
+    background-color: #333; /* Darker background for dark mode */
+    color: #e0e0e0; /* Text color for dark mode */
+}
+
+.post-image-container {
+    margin: 10px 0;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Dark mode styles */
+body.dark-mode .homepage-container {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1 {
+    color: #ffffff;
+}
+
+body.dark-mode .create-post-icon {
+    color: #ffffff;
+}
+
+body.dark-mode .blog-post {
+    background-color: #1e1e1e;
+    border: 1px solid #444444;
+}
+
+body.dark-mode .post-title {
+    color: #ffffff;
+}
+
+body.dark-mode .post-description {
+    color: #b0b0b0;
+}
+
+body.dark-mode .search-input {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+body.dark-mode .search-input:focus {
+    border-color: #007BFF;
+}
+
+body.dark-mode .text-danger {
+    color: #ff5252;
+}
+
+/* Button styles */
+.homepage-container button {
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #333;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.homepage-container button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Dark mode button styles */
+.dark-mode-button {
+    background-color: #333;
+    color: #ffffff;
+    border: 2px solid #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.dark-mode-button:hover {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+button.light-mode-button {
+    background-color:#333;
+    color: #ffffff;
+    border: 2px solid #333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+button.light-mode-button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
+i.fa-solid.fa-feather.feather{
+    font-size: 25px;
+    position: relative;
+    right: 20px;
+    bottom: 20px;
+}
+
+/* Adjusted Create Post Icon */
+.create-post-icon {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto; /* Aligns to the right by default */
+    margin-right: 20px; /* Add some margin on the right */
+    bottom: 60px;
+}
+
+.create-post-icon i {
+    position: relative;
+    top: -2px;
+}
+
+p.post {
+    position: relative;
+    margin: 0;
+    padding-left: 5px; /* Add some space between the icon and the text */
+}
+
+/* Media query adjustments for smaller screens */
+@media screen and (max-width: 960px) {
+    .create-post-icon {
+        margin-right: 0;
+        bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .create-post-icon {
+        flex-direction: row; /* Stack icon and text vertically on very small screens */
+        justify-content: flex-end;
+        /* align-items: center; */
+        width: 100%;
+        margin: 0 auto; /* Center the icon for smaller screens */
+        bottom: 60px;
+    }
+    
+    p.post {
+        padding-left: 0; /* Remove padding when stacked */
+    }
+}
+
+/* Media query for 480px and below */
+@media screen and (max-width: 480px) {
+    .create-post-icon {
+        flex-direction: row; /* Keep icon and text in a row */
+        justify-content:flex-end; /* Align to the start of the container */
+        width: 100%; /* Take full width */
+        padding: 0 10px; /* Add padding for spacing */
+        margin: 10px 0; /* Add some margin to avoid touching edges */
+        bottom: 60px;
+    }
+    
+    p.post {
+        padding-left: 5px; /* Restore padding for small screens */
+    }
+}
