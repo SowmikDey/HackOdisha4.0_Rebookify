@@ -1,5 +1,5 @@
 .formdiv{
-  background-image: url('./reg1_1.png');
+  background-image: url('../public/reg1_1.png');
 }
 div.delivery-form-container  {
   max-width: 800px;
