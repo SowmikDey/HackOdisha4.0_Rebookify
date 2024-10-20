@@ -6,7 +6,7 @@
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
   height: 100vh; /* Full viewport height */
-  background-image: url('../public/login.png');
+  background-image: url('/client/public/login.png');
 }
 
 .login-form-wrapper {
