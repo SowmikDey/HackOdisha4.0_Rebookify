@@ -27,6 +27,7 @@ app.use(cors({
 // Middleware for parsing JSON and URL-encoded data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 // Connect to MongoDB
 const mongoURI = process.env.MONGO_URI;
