@@ -49,7 +49,8 @@ export const PaymentConfirmation = () => {
         const data = await response.json();
         if (response.ok) {
           console.log('Order created successfully:', data);
-          navigate('/Delivery-confirmation');
+          // Navigate to paymentStatus page, passing the transactionId
+          navigate('/payment-status', { state: { transactionId: formData.transactionId } });
         } else {
           console.error('Error creating order:', data.message);
         }

@@ -8,6 +8,7 @@ const OrderSchema = new Schema({
     pickupAddress: { type: String, required: true },
     deliveryAddress: { type: String, required: true },
     deliveryStatus: { type: String, enum: ['pending', 'accepted', 'delivered'], default: 'pending' },
+    paymentStatus: { type: String, enum: ['pending', 'accepted', 'delivered'], default: 'pending' },
     deliveryBoy: { type: Schema.Types.ObjectId, ref: 'Driver1' },  // Reference to the Driver schema
 }, { timestamps: true });
 

@@ -6,6 +6,10 @@ import authRoutes from './routes/authRoutes.js';
 import otpRoutes from './routes/otpRoutes.js';
 import productRoutes from './routes/productRoutes.js';
 import ordersRoute from './routes/orderRoutes.js'; 
+import fetchOrders from './routes/fetchOrderRoute.js';
+import paymentStatus from './routes/paymentStatus.js';
+import order from './routes/orderroute.js';
+
 
 import dotenv from 'dotenv';
 
@@ -39,7 +43,11 @@ mongoose.connect(mongoURI)
 app.use('/', authRoutes);
 app.use('/', productRoutes);
 app.use('/', otpRoutes);
+app.use('/', order);
 app.use('/orders', ordersRoute);
+app.use('/', fetchOrders);
+app.use('/', paymentStatus);
+
 
 
 // Define the port and start the server
