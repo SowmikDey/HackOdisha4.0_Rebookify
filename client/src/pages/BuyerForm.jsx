@@ -30,7 +30,7 @@ export default function BuyerForm() {
     setLoading(true); 
 
     try {
-      const response = await axios.post(`https://hackodisha4-0-rebookify.onrender.com/regBuyer`, formData);
+      const response = await axios.post(`https://hackodisha4-0-rebookify-1.onrender.com/regBuyer`, formData);
       console.log('Response:', response.data);
       alert("success");
       if(response.status === 201){
