@@ -19,7 +19,7 @@ const app = express();
 
 // Use CORS middleware to allow requests from localhost:5173
 app.use(cors({
-  origin: 'https://hackodisha4-0-rebookify-1-client.onrender.com', // Specify the frontend URL
+  origin: 'https://hackodisha4-0-rebookify-2.onrender.com', // Specify the frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specified methods
   credentials: true, // Allow credentials if needed
 }));
