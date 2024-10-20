@@ -9,9 +9,7 @@ export default function SellerForm() {
     name: '',
     email: '',
     password:'',
-    address: '',
-    adharNo: '',          
-    licenseNo: '',        
+    address: '',       
     phone: '',            
     bankDetails: {
       accountHolderName: '', 
@@ -54,14 +52,12 @@ export default function SellerForm() {
       const response = await axios.post(`${import.meta.env.VITE_API_URL}/regSeller`, formData);
       console.log('Response:', response.data);
       alert("Success");
-      if (response.status === 200) {
+      if (response.status === 201) {
         // Reset form data after submission
         setFormData({
           name: '',
           email: '',
-          address: '',
-          adharNo: '',          
-          licenseNo: '',        
+          address: '',       
           phone: '',            
           bankDetails: {
             accountHolderName: '', 
@@ -72,7 +68,8 @@ export default function SellerForm() {
             upiId: '',             
           },
         });
-        navigate('/Userhomepage');  
+        alert("Success");
+        navigate('/login');  
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -238,7 +235,12 @@ export default function SellerForm() {
           {loading ? 'Submitting...' : 'Submit'}
         </button>
 
-        {error && <p className="error-message">{error}</p>} {/* Display error message */}
+        {error && (
+  <p className="error-message">
+    {typeof error === 'string' ? error : JSON.stringify(error)}
+  </p>
+)}
+
       </form>
     </div>
     </div>

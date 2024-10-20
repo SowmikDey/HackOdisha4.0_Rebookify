@@ -13,7 +13,7 @@ export const registerSeller = async (req, res) => {
     const { name, email, password, address, adharNo, licenseNo, phone, bankDetails } = req.body;
 
     try {
-        if (!name || !address || !adharNo || !licenseNo || !phone || !email || !password) {
+        if (!name || !address || !phone || !email || !password) {
             return res.status(400).json({ error: 'Missing required fields' });
         }
 
@@ -22,13 +22,13 @@ export const registerSeller = async (req, res) => {
             return res.status(409).json({ error: 'Seller with this email already exists' });
         }
 
+        const hashedPassword = await bcrypt.hash(password,10);
+
         const seller = new User({
             name,
             email,
-            password,
+            password : hashedPassword,
             address,
-            adharNo,
-            licenseNo,
             phone,
             bankDetails: {
                 accountHolderName: bankDetails.accountHolderName,

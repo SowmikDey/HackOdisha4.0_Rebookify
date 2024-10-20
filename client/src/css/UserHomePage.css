@@ -4,6 +4,7 @@
     background-size: cover; /* Keep the original size of the image */
     background-attachment: fixed; /* Make sure the image stays in place while scrolling */
     background-position: top left; /* Position the background at the top left */
+    height: 100vh;
 }
 
 
