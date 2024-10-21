@@ -5,22 +5,22 @@
   align-items: center;
   height: 100vh;
   text-align: center;
-  background-color: #f5ebe3; /* Light background color */
-  position: relative; /* Required for the absolute positioning of .color */
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  background-color: #f5ebe3;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .color {
   position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust to be exactly centered */
-  width: 500px; /* Increased size for better visibility */
-  height: 500px; /* Height should match the width */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
   background-image: radial-gradient(closest-side, rgba(230, 30, 49, 1) 0%, rgba(230, 30, 49, 0) 60%);
-  z-index: -1; /* Keep it behind the content */
-  filter: blur(50px); /* Increase blur for a more subtle, smooth glow */
-  opacity: 0.8; /* Slight transparency to blend with the background */
+  z-index: -1;
+  filter: blur(50px);
+  opacity: 0.8;
 }
 
 h1 {
@@ -72,4 +72,54 @@ body.dark-mode .Reg-Card {
 .light-mode-button:hover {
   background-color: #000;
   color: #fff;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .reg-opt-div {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 15px; /* Reduce the gap between cards */
+    align-items: center;
+  }
+
+  .Reg-Card {
+    width: 90%; /* Make the card width flexible on small screens */
+    height: auto; /* Allow the height to adjust based on content */
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Adjust heading size for smaller screens */
+  }
+
+  .light-mode-button {
+    padding: 10px 20px; /* Slightly larger padding for touch interaction */
+    font-size: 16px; /* Increase button font size for readability */
+  }
+
+  .color {
+    width: 250px; /* Reduce the blur color size */
+    height: 250px;
+    filter: blur(30px); /* Less intense blur for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .reg-opt-div {
+    gap: 10px; /* Further reduce the gap between cards */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Further reduce heading size for smaller screens */
+  }
+
+  .light-mode-button {
+    font-size: 14px; /* Maintain readable button text */
+  }
+
+  .color {
+    width: 200px;
+    height: 200px;
+    filter: blur(25px);
+  }
 }

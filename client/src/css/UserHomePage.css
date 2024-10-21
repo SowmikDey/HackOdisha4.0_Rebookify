@@ -1,16 +1,17 @@
-.user-div{
-    background: linear-gradient(90deg,#ff330d,#ff660f,#ff9a60,#c1dfde,#74d4d7,#073148);
-    background-repeat: repeat; /* Repeat the image both horizontally and vertically */
-    background-size: cover; /* Keep the original size of the image */
-    background-attachment: fixed; /* Make sure the image stays in place while scrolling */
-    background-position: top left; /* Position the background at the top left */
-    height: 100vh;
+.user-div {
+    background: linear-gradient(90deg, #ff330d, #ff660f, #ff9a60, #c1dfde, #74d4d7, #073148);
+    background-size: cover; /* Ensure the background covers the entire element */
+    background-position: center; /* Center the background */
+    height: 100vh; /* Set height to full viewport height */
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* Allow scrolling if content exceeds viewport height */
 }
-
 
 .dashboard-link{
     position: absolute;
     right: 20px;
+    z-index: 10;
 }
 
 /* Common styles */
